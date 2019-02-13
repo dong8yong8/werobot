@@ -1,5 +1,7 @@
 #coding=utf-8
 import re
+import time 
+
 def checkHomeWork(msg, partten):
     if re.match(partten, msg) != None:
         return True
@@ -19,3 +21,11 @@ def splitWorkMsg(workMsg):
     } 
 
     return returnDic
+
+def checkWorkDate(date):
+    if len(date) != 8:
+        return '作业日期格式不对, 日期为8位数字，如20001010'
+    elif date > time.strftime('%Y%m%d', time.localtime(time.time())):
+        return '作业日期过大'
+    else:
+        return True

@@ -13,6 +13,6 @@ database = {
         'port': 3306
 }
 
-workPartten = '^\s*###作业###(周|日)作业###\d{8}###.+'
+workPartten = '^\s*###作业###(周|日)作业###\d+###.+'
 youdaoBaseUrl = 'https:\/\/note\.youdao\.com.*'
 
